@@ -4,12 +4,40 @@
   --font001: Avengers;
 }
 
+  :root{
+    --cor01: #F0141E; /* Vermelho */
+    --cor02: #021127; /* Azul escuro*/
+    --cor03: #022844; /* Azul mais claro*/
+
+  }
+
+  *{
+    margin: 0;
+    padding: 0;
+  }
+
+  body{
+    background-color: #021127;
+  }
+
 .estrutura{
   grid: 
   "header header header" 70px
-  ". carrossel ." 150px
-  ". content ." 500px
+  "x carrossel x" 150px
+  "x content x" 500px
   / 1fr 3fr 1fr;
+}
+
+/* Header */
+
+.header{
+  background-color: #F0141E;
+  padding: 8px;
+  text-align: center;
+}
+
+.header img{
+  border: 1px solid white;
 }
 
 
@@ -63,6 +91,22 @@
     font-weight: medium;
   }
 
+  /* conteúdo */  
+  
+  .content{
+    grid-area: content;
+    background-color: #022844;
+
+  }
+
+
+
+
+
+
+
+
+
   /* Carrossel manual */
   
   .container {
@@ -70,6 +114,7 @@
     padding: 15px;
     max-width: 640px;
     margin: 0 auto;
+    display: flex;
   }
   
   .gallery-wrapper {
