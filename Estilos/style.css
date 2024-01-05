@@ -89,6 +89,9 @@
   .subtitulos{
     font-family: 'Avengers', 'Turret Road', sans-serif;;
     font-weight: medium;
+    color: white;
+    background-color: #F0141E;
+    padding: 5px 0 5px 10px;
   }
 
   /* conteúdo */  
