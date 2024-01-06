@@ -23,7 +23,7 @@
 .estrutura{
   display: grid;
   grid: 
-  "header header header" 190px
+  "header header header" 180px
   ". carrossel ." 250px
   ". content ." 
   / 1fr 3fr 1fr;
@@ -108,6 +108,10 @@
 
   }
 
+  .cri{
+    margin-bottom: 15px;
+  }
+
 
 
 
@@ -189,4 +193,22 @@
   .gallery-wrapper {
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
+  }
+
+
+  .criadores{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .criadores img{
+    margin: 10px;
+  }
+
+  .criadores p{
+    color: white;
+    font-size: 1.25em;
+    text-align: justify;
+    margin: 0 11px 0 11px;
   }
