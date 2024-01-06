@@ -24,8 +24,9 @@
   display: grid;
   grid: 
   "header header header" 180px
-  ". carrossel ." 250px
+  ". carrossel ." 255px
   ". content ." 
+  "footer footer footer" 
   / 1fr 3fr 1fr;
 }
 
@@ -105,6 +106,7 @@
   .content{
     grid-area: content;
     background-color: #022844;
+    padding-bottom: 10px;
 
   }
 
@@ -112,7 +114,10 @@
     margin-bottom: 15px;
   }
 
-
+  .pri{
+    margin-top: 15px;
+    font-style: italic;
+  }
 
 
 
@@ -211,4 +216,12 @@
     font-size: 1.25em;
     text-align: justify;
     margin: 0 11px 0 11px;
+  }
+
+  .footer{
+    grid-area: footer;
+    background-color: #F0141E;
+    color: white;
+    margin-top: 30px;
+    text-align: center;
   }
