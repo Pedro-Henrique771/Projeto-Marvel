@@ -244,15 +244,40 @@
     font-size: 1.25em;
     text-align: justify;
     margin: 10px 15px 20px 15px;
+    flex: 1 320px 260px;
   }
 
   .img-filme{
-    grid-area: img-filme;
-    width: 320px;
+    grid-area: img-filme; 
+    max-width: 320px;
     margin-left: 8px;
     border-radius: 5px;
     box-shadow: 5px 5px 5px black;
   }
+
+  /* Meu personagem favorito */
+
+  .my-favorit{
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 1 260px;
+  }
+  
+  .img-thor{
+    width: 320px;
+    margin: 15px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px black;
+  }
+
+  .my-favorit p{
+    flex: 1;
+    color: white;
+    font-size: 1.25em;
+    text-align: justify;
+    margin: 10px 15px 20px 15px;
+  }
+
 
 /* Footer */
   .footer{
