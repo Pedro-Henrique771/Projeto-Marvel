@@ -23,12 +23,24 @@
 .estrutura{
   display: grid;
   grid: 
-  "header header header" 180px
-  ". carrossel ." 255px
+  "header header header" /*180px */
+  ". carrossel ." /*255px*/
   ". content ." 
-  "footer footer footer" 
-  / 1fr 3fr 1fr;
+  "footer footer footer";
+  /*/ 1fr 3fr 1fr;*/
+  grid-template-rows: 180px 255px auto 180px;
+  grid-template-columns: 1fr 3fr 1fr;
 }
+
+/*@media (max-width: 850px) {
+  .estrutura{
+    grid-template-areas: 
+    "header"
+    "carrossel"
+    "content"
+    "footer";
+  }
+} */
 
 /* Header */
 
@@ -52,7 +64,6 @@
     overflow: hidden;
     position: relative;
     text-align: center;
-
   }
   
   .slide {
@@ -171,7 +182,8 @@
   
   .gallery {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row; 
+    flex-wrap: nowrap;
     gap: 15px;
   }
   
@@ -183,6 +195,21 @@
     opacity: 0.5;
   }
   
+  @media (max-width: 850px) {
+    .container{
+      max-width: 400px;
+    }
+    
+    .item{
+      width: 130px;
+      height: 130px;
+    }
+
+    .arrow-left, .arrow-right{
+      width: 20px;
+    }
+  }
+
   .current-item {
     opacity: 1;
   }
@@ -209,6 +236,16 @@
     grid-template-columns: 1fr 1fr;
     gap: 20px;
     align-items: start;
+  }
+
+  @media (max-width: 850px) {
+    .criadores{
+      grid-template-columns: 1fr;
+    }
+
+    #bio-stan-lee{
+      grid-row: 4 / 5;
+    }
   }
 
   .criadores img{
@@ -240,13 +277,21 @@
     ". p-filme";
   }
 
+  @media (max-width: 850px) {
+    .principal-filme{
+      grid-template-areas: 
+      "img-filme"
+      "p-filme";
+      align-items: center;
+    }
+  }
+
   .p-filme{
     grid-template-areas: p-filme;
     color: white;
     font-size: 1.25em;
     text-align: justify;
     margin: 10px 15px 20px 15px;
-    flex: 1 320px 260px;
   }
 
   .img-filme{
@@ -262,18 +307,19 @@
   .my-favorit{
     display: flex;
     flex-wrap: wrap;
-    flex: 1 1 260px;
+    justify-content: space-between;
   }
   
   .img-thor{
     width: 320px;
+    flex: 1 3 200px;
     margin: 15px;
     border-radius: 5px;
     box-shadow: 5px 5px 5px black;
   }
 
   .my-favorit p{
-    flex: 1;
+    flex: 1 3 200px;
     color: white;
     font-size: 1.25em;
     text-align: justify;
