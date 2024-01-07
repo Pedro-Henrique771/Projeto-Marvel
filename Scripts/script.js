@@ -1,5 +1,3 @@
-// Carrossel pt de cima (auto)
-
 let slides = document.querySelectorAll('.slide');
 let currentSlide = 0;
 
@@ -14,13 +12,14 @@ function nextSlide() {
 }
 
 function prevSlide() {
-    showSlide(currentSlide - 1);
-  }
-  
-  document.querySelector('.next').addEventListener('click', nextSlide);
-  document.querySelector('.prev').addEventListener('click', prevSlide);
+  showSlide(currentSlide - 1);
+}
 
-setInterval(nextSlide, 10000); // Muda de slide a cada 10 segundos (10000 milissegundos)
+document.querySelector('.next').addEventListener('click', nextSlide);
+document.querySelector('.prev').addEventListener('click', prevSlide);
+
+showSlide(currentSlide); // Exibe o primeiro slide imediatamente
+setInterval(nextSlide, 8000);
 
 // Carrossel parte de baixo (manual)
 

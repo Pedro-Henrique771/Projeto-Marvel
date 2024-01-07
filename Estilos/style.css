@@ -64,6 +64,7 @@
     overflow: hidden;
     position: relative;
     text-align: center;
+    width: 80%;
   }
   
   .slide {
@@ -71,9 +72,8 @@
   }
   
   .slide img {
-    max-width: 50%;
+    max-width: 60%;
     height: auto;
-    text-align: center;
     display: inline-block;
   }
   
@@ -130,12 +130,6 @@
     margin-top: 15px;
     font-style: italic;
   }
-
-
-
-
-
-
 
   /* Carrossel manual */
   
@@ -334,4 +328,9 @@
     color: white;
     margin-top: 30px;
     text-align: center;
+  }
+
+  .footer a{
+    text-decoration: none;
+    color: #022844;
   }
